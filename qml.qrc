@@ -3,5 +3,8 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>UI/Assets/Ferry_2563929.png</file>
+        <file>UI/Example.jpg</file>
+        <file>DisplayText.qml</file>
+        <file>UI/Assets/Detail_3266022.png</file>
     </qresource>
 </RCC>
