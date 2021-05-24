@@ -7,5 +7,7 @@
         <file>DisplayText.qml</file>
         <file>UI/Assets/Detail_3266022.png</file>
         <file>UI/Assets/Coins_3946198.png</file>
+        <file>UI/Assets/heart-4-512.png</file>
+        <file>UI/Assets/heart-filled-5-512.png</file>
     </qresource>
 </RCC>

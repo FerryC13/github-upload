@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.0, 2021-05-21T18:20:33. -->
+<!-- Written by QtCreator 4.15.0, 2021-05-24T15:15:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -568,7 +568,6 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Home_Page</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:D:/Study/C++/Qt/learn_qml_homepage/Home_Page.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Study/C++/Qt/learn_qml_homepage/Home_Page.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
