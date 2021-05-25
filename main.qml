@@ -8,6 +8,9 @@ ApplicationWindow {
     height: 940
     visible: true
     title: qsTr("Home page")
+    ToastManager {
+        id : toast
+    }
 
     Column {
         property string niceBlue: "#5085ff"
@@ -165,13 +168,15 @@ ApplicationWindow {
     }
 
 
+
+
     Rectangle{
         id : listStuff
         width : parent.width
         height: 850
         anchors.top: welcomeCol.bottom
-        anchors.topMargin: 10
-        color: "black"
+
+        color: "white"
 
         ListView {
             id: listView
@@ -183,15 +188,12 @@ ApplicationWindow {
                 Rectangle {
                 id: infoBubble
                 x : 5
-                y : 5 + 150*listView.model
+                y : 20 + 150*listView.model
                 color: welcomeCol.niceBlue
                 width : listView.width - 10
                 height: 150
                 radius: 10
-                border {
-                    color: "black"
-                    width: 3
-                }
+
 
                 Row {
                     id: theRow
@@ -225,11 +227,11 @@ ApplicationWindow {
                         height: theRow.height - 15
                         DisplayText {
                             id: bigTitle
-                            text: qsTr("Small stuff adds up!")
+                            text: qsTr("<b> Small stuff adds up! </b>")
                             font.pixelSize: 20
                             anchors {
                                 left: textframe.left
-                                leftMargin: 10
+                                leftMargin: 15
                             }
                         }
                         DisplayText {
@@ -245,7 +247,7 @@ ApplicationWindow {
                         DisplayText {
                             id : infoParagraph
                             width: parent.width -30
-                            height: parent.height - textframe.height - 10
+                            height: 50
                             fontSizeMode: Text.Fit
                             font.pixelSize: 15
                             minimumPixelSize: 12
@@ -262,7 +264,43 @@ ApplicationWindow {
 
                             }
                         }
+                        Rectangle {
+                            id: setupButton
+                            implicitWidth: buttonText.implicitWidth + 15
+                            implicitHeight: buttonText.implicitHeight + 15
+                            radius: 50
+                            anchors {
+                                top: infoParagraph.bottom
+                                topMargin: 5
+                                left: textframe.left
+                                leftMargin: 10
+                            }
+                            Text {
+                                id: buttonText
+                                color: "#122df1"
+                                text: qsTr("<b>SETUP A GOAL</b>")
+                                anchors.centerIn: parent
 
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: toast.show("Setting starts")
+                            }
+                        }
+                        Image {
+                            id: heartLogo
+                            source: "qrc:/UI/Assets/heart-4-512.png"
+                            width: coinLogo.width - 15
+                            height: coinLogo.height - 15
+                            fillMode: Image.PreserveAspectFit
+                            scale: 1
+                            anchors {
+                                right: textframe.right
+                                rightMargin:  10
+                                baseline: setupButton.baseline
+                            }
+                        }
 
                     }
                 }
@@ -272,5 +310,4 @@ ApplicationWindow {
     }
 }
 
-//I am fooking guud handsome
 
