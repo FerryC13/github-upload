@@ -11,7 +11,7 @@
         <file>UI/Assets/heart-filled-5-512.png</file>
         <file>Toast.qml</file>
         <file>ToastManager.qml</file>
-        <file>InfoModel.qml</file>
         <file>UI/Assets/coins.png</file>
+        <file>UI/Assets/heart.png</file>
     </qresource>
 </RCC>
